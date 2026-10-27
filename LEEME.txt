@@ -1,0 +1,25 @@
+UN RINCONCITO DE SNOOPY — PROTOTIPO
+
+Archivos:
+- index.html: prototipo interactivo que se abre en un navegador.
+
+Cómo probar:
+1. Descomprime el ZIP.
+2. Abre index.html en un navegador moderno.
+3. Entra a “mi espacio” para explorar la página.
+4. Para ver el panel del creador en esta demo, usa la clave DEMO: HOMER-DEMO.
+
+Incluye:
+- Diseño adaptable a móvil.
+- Temas según la hora de Nicaragua (America/Managua).
+- Slideshow y galería de fondos de demostración.
+- Chat de consuelo con respuestas locales de muestra (NO es una IA real conectada).
+- Canal de mensajes a Homer guardado solo en el navegador (NO envía notificaciones).
+- Sobres sorpresa de muestra.
+- Configuración de cumpleaños para el 3 de noviembre.
+- Panel de creador de demostración.
+
+IMPORTANTE:
+Esto es un prototipo frontend, NO está listo para publicarse con información privada.
+El login y la clave del panel son solo demostrativos. Los datos se guardan en localStorage del navegador y no se sincronizan entre dispositivos. No guardes contraseñas reales ni datos sensibles.
+Antes de publicar hay que implementar autenticación real, base de datos, almacenamiento de archivos, conexión a un proveedor de IA, autorización por roles y notificaciones de servidor. También hay que sustituir los emojis/ilustraciones CSS por imágenes de Snoopy que se tengan derecho a usar.
