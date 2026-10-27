@@ -149,7 +149,11 @@ function enter(name){currentUser=name;store.set('demoUser',name);go('home');$('g
 function showAdminGate(){$('adminGate').classList.toggle('hidden')}
 function enterAdmin(){if($('adminCode').value.trim().toUpperCase()!=='HOMER-DEMO'){alert('Para esta demo, escribe HOMER-DEMO. No uses una contraseña real.');return}currentUser='Homer';store.set('demoUser','Homer');go('admin')}
 function logout(){currentUser='';store.set('demoUser','');show('login')}
-function addBubble(container,text,who){const b=document.createElement('div');b.className='bubble '+who;b.textContent=text;$(container).appendChild(b);$(container).scrollTop=$(container).scrollHeight}
+function addBubble(container,who,text){const b=document.createElement('div');b.className=`bubble ${who}`;b.textContent=text;$(container).appendChild(b);$(container).scrollTop=$(container).scrollHeight}
+     
+    
+  
+  
 async function sendAI(e){e.preventDefault();const input=$('aiInput'),text=input.value.trim();if(!text)return;addBubble('aiMessages','me',text);input.value='';addBubble('aiMessages','ai','Escribiendo...');try{const res=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:text})});const data=await res.json();document.querySelector('#aiMessages .bubble:last-child').remove();addBubble('aiMessages','ai',data.reply||'No hubo respuesta');}catch(err){document.querySelector('#aiMessages .bubble:last-child').remove();addBubble('aiMessages','ai','Error de conexión con la IA.');}}
   
 function quickAI(t){$('aiInput').value=t;$('aiInput').focus()}
