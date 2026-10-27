@@ -3,9 +3,10 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Método no permitido' });
   }
-
-  const apiKey = process.env.GEMINI_API_KEY;
-
+    
+    const apiKey = process.env.CLAVE_API_GÉMINIS;
+  
+  
   if (!apiKey) {
     
     return res.status(500).json({ error: 'Falta configurar la clave de Gemini en el servidor.' });
